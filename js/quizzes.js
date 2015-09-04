@@ -47,8 +47,8 @@ var incrementLastArrayElement = function(_array) {
 var name = "AlbERt EINstEiN";
 
 function nameChanger(oldName) {
-    var finalName = oldName;
-    // Your code goes here!
+  var finalName = oldName;
+    
 	var spaceSeparator = " ";
 	var nameArray = finalName.split(spaceSeparator);
     
@@ -56,7 +56,7 @@ function nameChanger(oldName) {
     nameArray[1] = nameArray[1].toUpperCase();
     
     finalName = nameArray.join(" ");
-    //console.log(nameArray);
+    
     // Don't delete this line!
     return finalName;
 };
@@ -99,8 +99,58 @@ var weirdObject = {
 // notation to access the property, otherwise mark false.
 
 // For example, uncomment the line below to see if you can use dot notation to access `property1`.
- console.log(weirdObject.property[];
- console.log(weirdObject["property[]"]);
+ //console.log(weirdObject.8property;
+ //console.log(weirdObject["property[]"]);
 
 // I'll give you the first answer. The rest are set to false. Try out each property and
 // if you can use dot or bracket notation to access it, change the answer to true!
+
+//*************** Return Statement Quiz ********************** 
+// Lesson 2 
+var work = {
+  "jobs": [
+    {
+      "employer": "Udacity",
+      "title": "Course Developer",
+      "location": "Mountain View, CA",
+      "dates": "Feb 2014 - Current",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    },
+    {
+      "employer": "LearnBIG",
+      "title": "Software Engineer",
+      "location": "Seattle, WA",
+      "dates": "May 2013 - Jan 2014",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    },
+    {
+      "employer": "LEAD Academy Charter High School",
+      "title": "Science Teacher",
+      "location": "Nashville, TN",
+      "dates": "Jul 2012 - May 2013",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    },
+    {
+      "employer": "Stratford High School",
+      "title": "Science Teacher",
+      "location": "Nashville, TN",
+      "dates": "Jun 2009 - Jun 2012",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    }
+  ]
+};
+
+// Your code goes here! Let me help you get started
+
+function locationizer(work_obj) {
+    var locationsArray = [];
+    
+    for (var location in work_obj.jobs){
+      locationsArray.push(work_obj.jobs[location].location);
+    }
+    
+    return locationsArray;
+}
+
+// Did locationizer() work? This line will tell you!
+// console.log(locationizer(work));
